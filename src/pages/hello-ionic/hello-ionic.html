@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+   
+    <ion-title>Around the Globe</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div class="content">
+    <!-- weather -->
+    <ion-item>
+      <ion-input placeholder="Type location..." type="text" name="town" [(ngModel)]="town" (keyup)="searchLocation()">
+      </ion-input>
+    </ion-item>
+
+    <div class="weather">
+
+      <div class="top">
+        <div id="country">{{ country }} </div>
+
+        <div id="region">
+          <div class="reg">{{ region }}</div>
+          <div class="town"> - {{ name }}</div>
+        </div>
+      </div><!-- end of top -->
+
+      <div class="date">{{ localtime }}</div>
+      
+<div class="descript">
+        <div *ngIf="icon">
+          <img src="{{icon.current.condition.icon}}">
+        </div>
+        <div >
+          <p> {{ text }} </p>
+        </div>
+      </div>
+
+
+      <div id="temp" >{{temp_c}} &deg; C</div> 
+    </div>
+
+    <!-- news -->
+    <div class="news2">
+      <h1>Breaking News Around the World</h1>
+      <div class="news">
+<!-- first row -->
+        <div class="ony"><a (click)="fifi1()"><img src="{{article1}}" width="cover" height="100%"></a></div>
+        <div class="ony"><a (click)="fifi2()"></a><img src="{{article2}}" width="cover" height="100%"></div>
+        <div class="ony"><a (click)="fifi()"></a><img src="{{article}}" width="cover" height="100%"></div>
+
+
+      
+
+      <!-- second row -->
+      
+</div>
+
+    </div>
+
+  </div>
+
+</ion-content>
